@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var star: UIImageView!
+    
+    @IBAction func slider(_ sender: UISlider) {
+        star.layer.opacity = sender.value;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

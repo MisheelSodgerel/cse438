@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,9 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vm-NH-WnF">
-                                <rect key="frame" x="71" y="134" width="273" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vm-NH-WnF">
+                                <rect key="frame" x="71" y="134" width="272" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="LOc-gN-Yw3"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Hello there!">
                                         <attributes>
@@ -29,17 +32,50 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="star.slash" catalog="system" maximumValueImage="star.fill" translatesAutoresizingMaskIntoConstraints="NO" id="O6J-kI-cUE">
+                                <rect key="frame" x="73" y="609" width="268" height="31"/>
+                                <color key="tintColor" red="1" green="0.58669306499999996" blue="0.85405250030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iku-Ui-cCb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dx2-wg-EnJ"/>
+                                </connections>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YB0-6b-o8Q">
+                                <rect key="frame" x="116" y="273" width="182" height="170"/>
+                                <color key="tintColor" red="1" green="0.58669306504153895" blue="0.85405250033426761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <imageReference key="image" image="star.fill" catalog="system" symbolScale="medium"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="medium"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8vm-NH-WnF" firstAttribute="centerX" secondItem="YB0-6b-o8Q" secondAttribute="centerX" id="0mz-px-lFG"/>
+                            <constraint firstItem="YB0-6b-o8Q" firstAttribute="top" secondItem="8vm-NH-WnF" secondAttribute="bottom" constant="71" id="5bw-Vf-twK"/>
+                            <constraint firstItem="O6J-kI-cUE" firstAttribute="top" secondItem="YB0-6b-o8Q" secondAttribute="bottom" constant="166" id="9Vg-SG-1eL"/>
+                            <constraint firstItem="YB0-6b-o8Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="Ddk-bh-kIj"/>
+                            <constraint firstItem="YB0-6b-o8Q" firstAttribute="centerX" secondItem="O6J-kI-cUE" secondAttribute="centerX" id="dj3-15-xYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O6J-kI-cUE" secondAttribute="bottom" constant="223" id="hrk-zW-h12"/>
+                            <constraint firstItem="8vm-NH-WnF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="ie6-Uj-IQV"/>
+                            <constraint firstItem="8vm-NH-WnF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pgk-P6-FMk"/>
+                            <constraint firstItem="O6J-kI-cUE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="t3c-RI-PEa"/>
+                            <constraint firstItem="8vm-NH-WnF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="vcc-iy-xJn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="star" destination="YB0-6b-o8Q" id="buc-fL-ghx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-62.318840579710148" y="-172.09821428571428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="star.slash" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
