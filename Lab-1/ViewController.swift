@@ -15,37 +15,72 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var finalPrice: UILabel!
     
-    @IBAction func originalAction(_ sender: UILabel) {
-        let originalPrice = Double(original.text!)
-        let discountPercent = Double(discount.text!)
-        let salesPercent = Double(sales.text!)
+    @IBAction func origAction(_ sender: UITextField) {
+        var originalPrice = Double(original.text!)
+        var discountPercent = Double(discount.text!)
+        var salesPercent = Double(sales.text!)
+        
+        if (originalPrice == nil) {
+            originalPrice = 0.00
+        }
+        if (discountPercent == nil) {
+            discountPercent = 0.00
+        }
+        if (salesPercent == nil) {
+            salesPercent = 0.00
+        }
+            
+        let afterDiscount = originalPrice! - (originalPrice! * discountPercent! * 0.01)
+        let final = afterDiscount + (afterDiscount * salesPercent! * 0.01)
+        
+        let roundedFinal = round(final * 100) / 100.0
+        
+        finalPrice.text = "$\(roundedFinal)"
+    }
+    @IBAction func disAction(_ sender: UITextField) {
+        var originalPrice = Double(original.text!)
+        var discountPercent = Double(discount.text!)
+        var salesPercent = Double(sales.text!)
+        
+        if (originalPrice == nil) {
+            originalPrice = 0.00
+        }
+        if (discountPercent == nil) {
+            discountPercent = 0.00
+        }
+        if (salesPercent == nil) {
+            salesPercent = 0.00
+        }
         
         let afterDiscount = originalPrice! - (originalPrice! * discountPercent! * 0.01)
         let final = afterDiscount + (afterDiscount * salesPercent! * 0.01)
         
-        finalPrice.text = "$\(final)"
-    }
-    @IBAction func discountAction(_ sender: UILabel) {
-        let originalPrice = Double(original.text!);
-        let discountPercent = Double(discount.text!);
-        let salesPercent = Double(sales.text!);
+        let roundedFinal = round(final * 100) / 100.0
         
-        let afterDiscount = originalPrice! - (originalPrice! * discountPercent! * 0.01)
-        let final = afterDiscount + (afterDiscount * salesPercent! * 0.01)
-        
-        finalPrice.text = "$\(final)"
+        finalPrice.text = "$\(roundedFinal)"
     }
-    @IBAction func salesAction(_ sender: UILabel) {
-        let originalPrice = Double(original.text!);
-        let discountPercent = Double(discount.text!);
-        let salesPercent = Double(sales.text!);
+    @IBAction func saleAction(_ sender: UITextField) {
+        var originalPrice = Double(original.text!)
+        var discountPercent = Double(discount.text!)
+        var salesPercent = Double(sales.text!)
+        
+        if (originalPrice == nil) {
+            originalPrice = 0.00
+        }
+        if (discountPercent == nil) {
+            discountPercent = 0.00
+        }
+        if (salesPercent == nil) {
+            salesPercent = 0.00
+        }
     
         let afterDiscount = originalPrice! - (originalPrice! * discountPercent! * 0.01)
         let final = afterDiscount + (afterDiscount * salesPercent! * 0.01)
         
-        finalPrice.text = "$\(final)"
+        let roundedFinal = round(final * 100) / 100.0
+        
+        finalPrice.text = "$\(roundedFinal)"
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

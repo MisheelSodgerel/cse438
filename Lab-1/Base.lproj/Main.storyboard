@@ -53,6 +53,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
                                         <connections>
+                                            <action selector="origAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="qBY-eX-egZ"/>
                                             <action selector="originalAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yms-l3-Ryd"/>
                                         </connections>
                                     </textField>
@@ -98,6 +99,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
                                         <connections>
+                                            <action selector="disAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="Kuq-FI-xTK"/>
                                             <action selector="salesAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="o5w-3v-9U9"/>
                                         </connections>
                                     </textField>
@@ -108,6 +110,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
                                         <connections>
                                             <action selector="discountAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="I6C-co-56e"/>
+                                            <action selector="saleAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="UoT-kk-nB3"/>
                                         </connections>
                                     </textField>
                                 </subviews>
