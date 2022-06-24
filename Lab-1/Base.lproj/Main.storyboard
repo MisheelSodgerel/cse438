@@ -52,6 +52,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="originalAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yms-l3-Ryd"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(please input the percent)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sM-GD-L1g">
                                         <rect key="frame" x="20" y="134" width="117" height="11"/>
@@ -94,12 +97,18 @@
                                         <color key="tintColor" red="0.62987667322158813" green="0.81579881906509399" blue="0.92104512453079224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="salesAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="o5w-3v-9U9"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3v6-kb-FoO">
                                         <rect key="frame" x="173" y="97" width="66" height="34"/>
                                         <color key="tintColor" red="0.62987667322158813" green="0.81579881906509399" blue="0.92104512453079224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="discountAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="I6C-co-56e"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,6 +136,30 @@
                                     <constraint firstItem="0Kl-Qa-V5x" firstAttribute="leading" secondItem="3v6-kb-FoO" secondAttribute="leading" id="zqo-Gc-umu"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPW-YL-tCB">
+                                <rect key="frame" x="126" y="507" width="162" height="107"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ah-Tw-VaF">
+                                        <rect key="frame" x="73.5" y="57" width="15" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGJ-oc-9D9">
+                                        <rect key="frame" x="20" y="20" width="122" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="1" green="0.58669306499999996" blue="0.85405250030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pGJ-oc-9D9" firstAttribute="centerX" secondItem="GPW-YL-tCB" secondAttribute="centerX" id="q2T-ga-s8k"/>
+                                    <constraint firstItem="pGJ-oc-9D9" firstAttribute="centerX" secondItem="5Ah-Tw-VaF" secondAttribute="centerX" id="sfD-Rv-hsr"/>
+                                    <constraint firstItem="pGJ-oc-9D9" firstAttribute="top" secondItem="GPW-YL-tCB" secondAttribute="top" constant="20" id="vvR-GQ-qgX"/>
+                                    <constraint firstItem="5Ah-Tw-VaF" firstAttribute="top" secondItem="pGJ-oc-9D9" secondAttribute="bottom" constant="8" id="yCQ-Bf-IXP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,11 +169,21 @@
                             <constraint firstItem="3e8-AB-zUW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L3a-kj-PdN"/>
                             <constraint firstItem="Ik4-Vt-Ww3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16.5" id="Me8-BJ-Tt4"/>
                             <constraint firstItem="Ik4-Vt-Ww3" firstAttribute="centerX" secondItem="3e8-AB-zUW" secondAttribute="centerX" id="NVg-hb-R6h"/>
+                            <constraint firstItem="GPW-YL-tCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="VVQ-UO-xom"/>
                             <constraint firstAttribute="bottom" secondItem="Ik4-Vt-Ww3" secondAttribute="bottom" constant="712" id="ZQL-vp-dvP"/>
+                            <constraint firstItem="GPW-YL-tCB" firstAttribute="top" secondItem="3e8-AB-zUW" secondAttribute="bottom" constant="37.999999999999943" id="bke-In-9nv"/>
+                            <constraint firstItem="GPW-YL-tCB" firstAttribute="centerX" secondItem="3e8-AB-zUW" secondAttribute="centerX" id="oAs-OR-PAA"/>
                             <constraint firstItem="3e8-AB-zUW" firstAttribute="top" secondItem="Ik4-Vt-Ww3" secondAttribute="bottom" constant="41" id="oFk-EM-Lnx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3e8-AB-zUW" secondAttribute="bottom" constant="393" id="qSO-zn-OR5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GPW-YL-tCB" secondAttribute="bottom" constant="248" id="vkq-8C-Gaz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="discount" destination="3v6-kb-FoO" id="kN0-Fd-HPY"/>
+                        <outlet property="finalPrice" destination="5Ah-Tw-VaF" id="HLv-Wf-JTp"/>
+                        <outlet property="original" destination="0Kl-Qa-V5x" id="XxU-NG-PO3"/>
+                        <outlet property="sales" destination="vR3-gI-Jzv" id="gYK-G0-hQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
