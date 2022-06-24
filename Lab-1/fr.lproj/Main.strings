@@ -3,34 +3,34 @@
 "0Kl-Qa-V5x.placeholder" = "00.00";
 
 /* Class = "UILabel"; text = "(please input the percent)"; ObjectID = "3sM-GD-L1g"; */
-"3sM-GD-L1g.text" = "(please input the percent)";
+"3sM-GD-L1g.text" = "(veuillez entrer le pourcentage)";
 
 /* Class = "UITextField"; placeholder = "00.00"; ObjectID = "3v6-kb-FoO"; */
 "3v6-kb-FoO.placeholder" = "00.00";
 
 /* Class = "UILabel"; text = "$"; ObjectID = "5Ah-Tw-VaF"; */
-"5Ah-Tw-VaF.text" = "$";
+"5Ah-Tw-VaF.text" = "€";
 
 /* Class = "UILabel"; text = "(please input the percent)"; ObjectID = "Evn-1V-Cyi"; */
-"Evn-1V-Cyi.text" = "(please input the percent)";
+"Evn-1V-Cyi.text" = "(veuillez entrer le pourcentage)";
 
 /* Class = "UILabel"; text = "Sales Tax %"; ObjectID = "Jzh-L8-4Yq"; */
-"Jzh-L8-4Yq.text" = "Sales Tax %";
+"Jzh-L8-4Yq.text" = "Taxe de vente %";
 
 /* Class = "UILabel"; text = "Original Price"; ObjectID = "Wt1-6n-ILj"; */
-"Wt1-6n-ILj.text" = "Original Price";
+"Wt1-6n-ILj.text" = "Prix ​​d'origine";
 
 /* Class = "UILabel"; text = "Shopping Calculator"; ObjectID = "kAN-HI-oNw"; */
-"kAN-HI-oNw.text" = "Shopping Calculator";
+"kAN-HI-oNw.text" = "Calculatrice d'achat";
 
 /* Class = "UILabel"; text = "Final Price:"; ObjectID = "pGJ-oc-9D9"; */
-"pGJ-oc-9D9.text" = "Final Price:";
+"pGJ-oc-9D9.text" = "Prix ​​final:";
 
 /* Class = "UILabel"; text = "Discount %"; ObjectID = "ujT-GT-GJd"; */
-"ujT-GT-GJd.text" = "Discount %";
+"ujT-GT-GJd.text" = "Remise %";
 
 /* Class = "UILabel"; text = "Insert your values into the text boxes below to calculate the final price!"; ObjectID = "v91-hd-9DB"; */
-"v91-hd-9DB.text" = "Insert your values into the text boxes below to calculate the final price!";
+"v91-hd-9DB.text" = "Insérez vos valeurs dans les zones de texte ci-dessous pour calculer le prix final !";
 
 /* Class = "UITextField"; placeholder = "00.00"; ObjectID = "vR3-gI-Jzv"; */
 "vR3-gI-Jzv.placeholder" = "00.00";

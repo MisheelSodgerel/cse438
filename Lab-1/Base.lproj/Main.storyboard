@@ -19,9 +19,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ik4-Vt-Ww3">
                                 <rect key="frame" x="16.5" y="78" width="381" height="106"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert your values into the text boxes below to calculate the final price!" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v91-hd-9DB">
-                                        <rect key="frame" x="20" y="70" width="341" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert your values into the text boxes below to calculate the final price!" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v91-hd-9DB">
+                                        <rect key="frame" x="50" y="70" width="281" height="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -140,7 +140,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPW-YL-tCB">
-                                <rect key="frame" x="126" y="507" width="162" height="107"/>
+                                <rect key="frame" x="126" y="508" width="162" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ah-Tw-VaF">
                                         <rect key="frame" x="73.5" y="57" width="15" height="29"/>
@@ -176,8 +176,8 @@
                             <constraint firstAttribute="bottom" secondItem="Ik4-Vt-Ww3" secondAttribute="bottom" constant="712" id="ZQL-vp-dvP"/>
                             <constraint firstItem="GPW-YL-tCB" firstAttribute="top" secondItem="3e8-AB-zUW" secondAttribute="bottom" constant="37.999999999999943" id="bke-In-9nv"/>
                             <constraint firstItem="GPW-YL-tCB" firstAttribute="centerX" secondItem="3e8-AB-zUW" secondAttribute="centerX" id="oAs-OR-PAA"/>
-                            <constraint firstItem="3e8-AB-zUW" firstAttribute="top" secondItem="Ik4-Vt-Ww3" secondAttribute="bottom" constant="41" id="oFk-EM-Lnx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3e8-AB-zUW" secondAttribute="bottom" constant="393" id="qSO-zn-OR5"/>
+                            <constraint firstItem="3e8-AB-zUW" firstAttribute="top" secondItem="Ik4-Vt-Ww3" secondAttribute="bottom" constant="42" id="oFk-EM-Lnx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3e8-AB-zUW" secondAttribute="bottom" constant="392" id="qSO-zn-OR5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GPW-YL-tCB" secondAttribute="bottom" constant="248" id="vkq-8C-Gaz"/>
                         </constraints>
                     </view>
@@ -193,6 +193,7 @@
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.63065630197525024" green="0.79498356580734253" blue="0.9219629168510437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
