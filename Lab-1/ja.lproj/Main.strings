@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "00.00"; ObjectID = "0Kl-Qa-V5x"; */
+"0Kl-Qa-V5x.placeholder" = "00.00";
+
+/* Class = "UILabel"; text = "(please input the percent)"; ObjectID = "3sM-GD-L1g"; */
+"3sM-GD-L1g.text" = "(please input the percent)";
+
+/* Class = "UITextField"; placeholder = "00.00"; ObjectID = "3v6-kb-FoO"; */
+"3v6-kb-FoO.placeholder" = "00.00";
+
+/* Class = "UILabel"; text = "$"; ObjectID = "5Ah-Tw-VaF"; */
+"5Ah-Tw-VaF.text" = "$";
+
+/* Class = "UILabel"; text = "(please input the percent)"; ObjectID = "Evn-1V-Cyi"; */
+"Evn-1V-Cyi.text" = "(please input the percent)";
+
+/* Class = "UILabel"; text = "Sales Tax %"; ObjectID = "Jzh-L8-4Yq"; */
+"Jzh-L8-4Yq.text" = "Sales Tax %";
+
+/* Class = "UILabel"; text = "Original Price"; ObjectID = "Wt1-6n-ILj"; */
+"Wt1-6n-ILj.text" = "Original Price";
+
+/* Class = "UILabel"; text = "Shopping Calculator"; ObjectID = "kAN-HI-oNw"; */
+"kAN-HI-oNw.text" = "Shopping Calculator";
+
+/* Class = "UILabel"; text = "Final Price:"; ObjectID = "pGJ-oc-9D9"; */
+"pGJ-oc-9D9.text" = "Final Price:";
+
+/* Class = "UILabel"; text = "Discount %"; ObjectID = "ujT-GT-GJd"; */
+"ujT-GT-GJd.text" = "Discount %";
+
+/* Class = "UILabel"; text = "Insert your values into the text boxes below to calculate the final price!"; ObjectID = "v91-hd-9DB"; */
+"v91-hd-9DB.text" = "Insert your values into the text boxes below to calculate the final price!";
+
+/* Class = "UITextField"; placeholder = "00.00"; ObjectID = "vR3-gI-Jzv"; */
+"vR3-gI-Jzv.placeholder" = "00.00";

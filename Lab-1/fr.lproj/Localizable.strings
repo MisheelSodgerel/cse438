@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Lab-1
+
+  Created by Misheel Sodgerel on 6/23/22.
+  
+*/
+
+"Shopping Calculator" = "Calculatrice d'achat";
+
+"Insert your values into the text boxes below to calculate the final price!" = "Insérez vos valeurs dans les zones de texte ci-dessous pour calculer le prix final !";
+
+"Original Price" = "Prix ​​d'origine";
+
+"Discount %" = "Remise %";
+
+"Sales Tax %" = "Taxe de vente %";
+
+"please input the percent" = "(veuillez entrer le pourcentage)";
+
+"Final Price:" = "Prix ​​final";
+
+"Overspending by $" = "Dépassement de €";
+
+"Underspending by $" = "Sous-dépenses de €";
+
+"$0 leftover" = "0 € restant";
+
+"Budget" = "Budget";
+
+"Budget Status:" = "État du budget :";
+
+"$" = "€";
