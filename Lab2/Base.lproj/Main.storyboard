@@ -121,9 +121,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="SY3-9K-uze" firstAttribute="leading" secondItem="vqX-Vz-01b" secondAttribute="leading" id="nsa-qV-yGC"/>
-                                </constraints>
                                 <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
