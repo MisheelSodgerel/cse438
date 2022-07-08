@@ -1,24 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uF7-2X-uai" customClass="DrawingView" customModule="lab3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="614"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IEs-0X-tyn" appends="YES" id="Eyt-1D-f5n"/>
+                                    <outletCollection property="gestureRecognizers" destination="fAD-9A-apV" appends="YES" id="RFM-U1-uHQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59g-u9-U5b">
+                                <rect key="frame" x="0.0" y="658" width="414" height="204"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="U7a-O6-tKH">
+                                        <rect key="frame" x="15" y="87" width="384" height="91"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DRs-L0-JhR">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="ljb-89-qyl"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="" image="circle" catalog="system"/>
+                                                    <segment title="" image="square" catalog="system"/>
+                                                    <segment title="" image="square" catalog="system"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wyI-LP-pak">
+                                                <rect key="frame" x="0.0" y="60" width="384" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="ZB5-JV-A8P"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Draw"/>
+                                                    <segment title="Move"/>
+                                                    <segment title="Erase"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="npN-e6-17E">
+                                        <rect key="frame" x="8" y="18" width="398" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKo-CX-sRk">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Izw-UH-q1B"/>
+                                                </constraints>
+                                                <color key="tintColor" red="1" green="0.58669306499999996" blue="0.85405250030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6R-e5-fKD">
+                                                <rect key="frame" x="68" y="0.0" width="58" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="pxK-TU-drs"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.63065630197525024" green="0.79498356580734253" blue="0.9219629168510437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjF-K4-Cab">
+                                                <rect key="frame" x="136" y="0.0" width="58" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3rf-p0-2E9"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.64190250635147095" green="0.91154605150222778" blue="0.53281885385513306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eM5-VB-mw7">
+                                                <rect key="frame" x="204" y="0.0" width="58" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="JXe-68-1X5"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.64401036500930786" green="0.67157167196273804" blue="0.92311912775039673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCP-jW-lgD">
+                                                <rect key="frame" x="272" y="0.0" width="58" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="N6r-sm-6ck"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.92167288064956665" green="0.8933027982711792" blue="0.22753164172172546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYG-ma-aHn">
+                                                <rect key="frame" x="340" y="0.0" width="58" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="pDL-bg-03b"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.91752344369888306" green="0.60087651014328003" blue="0.56336069107055664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="U7a-O6-tKH" firstAttribute="leading" secondItem="59g-u9-U5b" secondAttribute="leading" constant="15" id="1T7-lq-AQa"/>
+                                    <constraint firstAttribute="trailing" secondItem="U7a-O6-tKH" secondAttribute="trailing" constant="15" id="COV-go-3vu"/>
+                                    <constraint firstItem="U7a-O6-tKH" firstAttribute="top" secondItem="npN-e6-17E" secondAttribute="bottom" constant="29" id="CRf-oB-Nl3"/>
+                                    <constraint firstItem="npN-e6-17E" firstAttribute="leading" secondItem="59g-u9-U5b" secondAttribute="leading" constant="8" id="apE-EB-Qb6"/>
+                                    <constraint firstAttribute="bottom" secondItem="U7a-O6-tKH" secondAttribute="bottom" constant="26" id="gPy-Xa-Wdl"/>
+                                    <constraint firstItem="npN-e6-17E" firstAttribute="top" secondItem="59g-u9-U5b" secondAttribute="top" constant="18" id="gwt-Hy-BCW"/>
+                                    <constraint firstAttribute="trailing" secondItem="npN-e6-17E" secondAttribute="trailing" constant="8" id="xnq-d2-oyf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="59g-u9-U5b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MY4-KD-tdu"/>
+                            <constraint firstItem="uF7-2X-uai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mw5-Nq-e5z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="59g-u9-U5b" secondAttribute="bottom" id="PcT-QM-xfD"/>
+                            <constraint firstItem="uF7-2X-uai" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ptu-79-Dy9"/>
+                            <constraint firstItem="59g-u9-U5b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Te6-nd-NOR"/>
+                            <constraint firstItem="uF7-2X-uai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aIa-e9-Oso"/>
+                            <constraint firstItem="59g-u9-U5b" firstAttribute="top" secondItem="uF7-2X-uai" secondAttribute="bottom" id="j4T-ap-btC"/>
+                            <constraint firstItem="59g-u9-U5b" firstAttribute="top" secondItem="uF7-2X-uai" secondAttribute="bottom" id="rFG-Qq-gQh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="IEs-0X-tyn">
+                    <connections>
+                        <action selector="rotation:" destination="BYZ-38-t0r" id="Hsk-wh-EB0"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="fAD-9A-apV">
+                    <connections>
+                        <action selector="pinch:" destination="BYZ-38-t0r" id="J4M-9u-7mb"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

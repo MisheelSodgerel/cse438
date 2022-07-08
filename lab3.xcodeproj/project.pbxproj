@@ -13,6 +13,9 @@
 		7328419228777CFD00C8A2F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7328419028777CFD00C8A2F0 /* Main.storyboard */; };
 		7328419428777D0000C8A2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7328419328777D0000C8A2F0 /* Assets.xcassets */; };
 		7328419728777D0000C8A2F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7328419528777D0000C8A2F0 /* LaunchScreen.storyboard */; };
+		732841A128778E0900C8A2F0 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328419E28778E0900C8A2F0 /* Shape.swift */; };
+		732841A228778E0900C8A2F0 /* DrawingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328419F28778E0900C8A2F0 /* DrawingItem.swift */; };
+		732841A328778E0900C8A2F0 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732841A028778E0900C8A2F0 /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		7328419328777D0000C8A2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7328419628777D0000C8A2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7328419828777D0000C8A2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7328419E28778E0900C8A2F0 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = ../../../../Downloads/Shape.swift; sourceTree = "<group>"; };
+		7328419F28778E0900C8A2F0 /* DrawingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawingItem.swift; path = ../../../../Downloads/DrawingItem.swift; sourceTree = "<group>"; };
+		732841A028778E0900C8A2F0 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawingView.swift; path = ../../../../Downloads/DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		7328418928777CFD00C8A2F0 /* lab3 */ = {
 			isa = PBXGroup;
 			children = (
+				7328419F28778E0900C8A2F0 /* DrawingItem.swift */,
+				732841A028778E0900C8A2F0 /* DrawingView.swift */,
+				7328419E28778E0900C8A2F0 /* Shape.swift */,
 				7328418A28777CFD00C8A2F0 /* AppDelegate.swift */,
 				7328418C28777CFD00C8A2F0 /* SceneDelegate.swift */,
 				7328418E28777CFD00C8A2F0 /* ViewController.swift */,
@@ -141,6 +150,9 @@
 				7328418F28777CFD00C8A2F0 /* ViewController.swift in Sources */,
 				7328418B28777CFD00C8A2F0 /* AppDelegate.swift in Sources */,
 				7328418D28777CFD00C8A2F0 /* SceneDelegate.swift in Sources */,
+				732841A328778E0900C8A2F0 /* DrawingView.swift in Sources */,
+				732841A228778E0900C8A2F0 /* DrawingItem.swift in Sources */,
+				732841A128778E0900C8A2F0 /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
