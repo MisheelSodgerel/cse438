@@ -18,9 +18,6 @@ class CircleClick: Shape {
         path.addArc(withCenter: self.origin, radius: 20, startAngle: 0, endAngle: CGFloat(Float.pi*2), clockwise: true)
         self.color.setFill()
         path.fill()
-        
-        self.color.setStroke()
-        path.stroke()
     }
     
     required init?(coder: NSCoder) {

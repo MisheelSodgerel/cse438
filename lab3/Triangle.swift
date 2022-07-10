@@ -21,9 +21,6 @@ class TriangleClick: Shape {
         path.close()
         self.color.setFill()
         path.fill()
-        
-        self.color.setStroke()
-        path.stroke()
     }
     
     required init?(coder: NSCoder) {

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uF7-2X-uai" customClass="DrawingView" customModule="lab3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="428" height="644"/>
+                                <rect key="frame" x="0.0" y="129" width="428" height="559"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="IEs-0X-tyn" appends="YES" id="Eyt-1D-f5n"/>
@@ -27,6 +27,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59g-u9-U5b">
                                 <rect key="frame" x="0.0" y="688" width="428" height="204"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8V-Wv-Mrj">
+                                        <rect key="frame" x="0.0" y="83" width="428" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="U7a-O6-tKH">
                                         <rect key="frame" x="15" y="87" width="398" height="91"/>
                                         <subviews>
@@ -163,18 +168,65 @@
                                     <constraint firstAttribute="trailing" secondItem="npN-e6-17E" secondAttribute="trailing" constant="8" id="xnq-d2-oyf"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cu5-75-HzS">
+                                <rect key="frame" x="0.0" y="44" width="428" height="77"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="Cpd-7N-S5K">
+                                        <rect key="frame" x="12" y="28" width="404.33333333333331" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab 3: Drawing App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R8-u2-Y4l">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="liI-hh-et7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJo-Bx-vIV">
+                                                <rect key="frame" x="292.33333333333331" y="0.0" width="112" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="SLU-e0-Qfv"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="tintColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Clear">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0bq-2y-Rij"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="Cpd-7N-S5K" firstAttribute="leading" secondItem="Cu5-75-HzS" secondAttribute="leading" constant="12" id="5fL-bT-sYc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cpd-7N-S5K" secondAttribute="trailing" constant="11.666666666666686" id="FvE-WG-tHY"/>
+                                    <constraint firstItem="Cpd-7N-S5K" firstAttribute="top" secondItem="Cu5-75-HzS" secondAttribute="top" constant="28" id="Mkk-Du-sv4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cpd-7N-S5K" secondAttribute="bottom" constant="28" id="iYr-1R-uqs"/>
+                                    <constraint firstAttribute="height" constant="77" id="irf-6D-mpD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="59g-u9-U5b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MY4-KD-tdu"/>
-                            <constraint firstItem="uF7-2X-uai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mw5-Nq-e5z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="59g-u9-U5b" secondAttribute="bottom" id="PcT-QM-xfD"/>
                             <constraint firstItem="uF7-2X-uai" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ptu-79-Dy9"/>
                             <constraint firstItem="59g-u9-U5b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Te6-nd-NOR"/>
+                            <constraint firstItem="Cu5-75-HzS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TiT-bx-FdD"/>
+                            <constraint firstItem="Cu5-75-HzS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vjm-tn-jEz"/>
+                            <constraint firstItem="uF7-2X-uai" firstAttribute="top" secondItem="Cu5-75-HzS" secondAttribute="bottom" constant="8" symbolic="YES" id="Y8s-mO-obP"/>
+                            <constraint firstItem="Cu5-75-HzS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YvW-hi-QcJ"/>
                             <constraint firstItem="uF7-2X-uai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aIa-e9-Oso"/>
+                            <constraint firstItem="Cu5-75-HzS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="alt-cP-85b"/>
                             <constraint firstItem="59g-u9-U5b" firstAttribute="top" secondItem="uF7-2X-uai" secondAttribute="bottom" id="j4T-ap-btC"/>
+                            <constraint firstItem="Cu5-75-HzS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uvZ-Ef-ArL"/>
+                            <constraint firstItem="Cu5-75-HzS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yaN-90-0FR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -193,7 +245,7 @@
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+            <point key="canvasLocation" x="18.22429906542056" y="97.192224622030238"/>
         </scene>
     </scenes>
     <resources>
@@ -205,6 +257,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var drawingView: DrawingView!
     var currentShape: Shape?
     var currentColor: UIColor = UIColor.clear
-    var drawing: Bool = false
+    var drawing: Bool = true
     var moving: Bool = false
     var erasing: Bool = false
     var shapeSelected: Int = 0
@@ -85,57 +85,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-//    @IBAction func actionButton(_ sender: UISegmentedControl) {
-//
-//        guard let selectedAction = segments(rawValue: sender.selectedSegmentIndex) else {
-//           fatalError("no selected action")
-//        }
-//
-//        switch selectedAction {
-//        case .sectionOne:
-//            drawing = true
-//            moving = false
-//            erasing = false
-//        case .sectionTwo:
-//            drawing = false
-//            moving = true
-//            erasing = false
-//        case .sectionThree:
-//            drawing = false
-//            moving = false
-//            erasing = true
-//        }
-//    }
-//
-//    @IBAction func shapeButton(_ sender: UISegmentedControl) {
-//
-//        guard let selectedAction = segments(rawValue: sender.selectedSegmentIndex) else {
-//           fatalError("no selected action")
-//        }
-//
-//        switch selectedAction {
-//        case .sectionOne:
-//            shapeSelected = 0
-//        case .sectionTwo:
-//            shapeSelected = 1
-//        case .sectionThree:
-//            shapeSelected = 2
-//        }
-//
-//        if (sender.selectedSegmentIndex == 0) {
-//            shapeSelected = 0
-//        }
-//        if (sender.selectedSegmentIndex == 1) {
-//            shapeSelected = 1
-//        }
-//        if (sender.selectedSegmentIndex == 2) {
-//            shapeSelected = 2
-//        }
-//    }
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -145,30 +94,42 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        
         guard touches.count == 1,
               let touchPoint = touches.first?.location(in: drawingView)
         else { return }
         
-        if (shapeSelected == segments.sectionOne.rawValue) {
-            currentShape = CircleClick(origin: touchPoint, color: currentColor)
+        if (drawing) {
+            if (shapeSelected == segments.sectionOne.rawValue) {
+                currentShape = CircleClick(origin: touchPoint, color: currentColor)
+            }
+            if (shapeSelected == segments.sectionTwo.rawValue) {
+                currentShape = SquareClick(origin: touchPoint, color: currentColor)
+            }
+            if (shapeSelected == segments.sectionThree.rawValue) {
+                currentShape = TriangleClick(origin: touchPoint, color: currentColor)
+            }
         }
-        if (shapeSelected == segments.sectionTwo.rawValue) {
-            currentShape = SquareClick(origin: touchPoint, color: currentColor)
+        else if (moving) {
+            
         }
-        if (shapeSelected == segments.sectionThree.rawValue) {
-            currentShape = TriangleClick(origin: touchPoint, color: currentColor)
+        else if (erasing) {
+//            if (shapeSelected == segments.sectionOne.rawValue) {
+//                drawingView.items.firstIndex(where:  == touchPoint)
+//                currentShape = CircleClick(origin: touchPoint, color: currentColor)
+//            }
+//            if (shapeSelected == segments.sectionTwo.rawValue) {
+//                currentShape = SquareClick(origin: touchPoint, color: currentColor)
+//            }
+//            if (shapeSelected == segments.sectionThree.rawValue) {
+//                currentShape = TriangleClick(origin: touchPoint, color: currentColor)
+//            }
         }
-    
     }
 
-    
-//    @IBAction func clearStuff(_ sender: Any) {
-//
-//        canvas.shapes = []
-//
-//    }
-    
+
+    @IBAction func clear(_ sender: UIButton) {
+        drawingView.items.removeAll()
+    }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -185,7 +146,6 @@ class ViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-       
         if let newShape = currentShape {
             drawingView.items.append(newShape)
         }
