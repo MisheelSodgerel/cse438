@@ -20,6 +20,9 @@
 		732841A72878FE9A00C8A2F0 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732841A62878FE9A00C8A2F0 /* Functions.swift */; };
 		732841A9287A778E00C8A2F0 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732841A8287A778D00C8A2F0 /* Triangle.swift */; };
 		732841AB287A7E3B00C8A2F0 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732841AA287A7E3B00C8A2F0 /* Square.swift */; };
+		732841AD287A90B000C8A2F0 /* SolidShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732841AC287A90B000C8A2F0 /* SolidShape.swift */; };
+		732841AF287A917100C8A2F0 /* OutlineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732841AE287A917100C8A2F0 /* OutlineShape.swift */; };
+		732841B4287BD96300C8A2F0 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 732841B3287BD96300C8A2F0 /* readMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		732841A62878FE9A00C8A2F0 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		732841A8287A778D00C8A2F0 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		732841AA287A7E3B00C8A2F0 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		732841AC287A90B000C8A2F0 /* SolidShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidShape.swift; sourceTree = "<group>"; };
+		732841AE287A917100C8A2F0 /* OutlineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineShape.swift; sourceTree = "<group>"; };
+		732841B3287BD96300C8A2F0 /* readMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,9 @@
 				7328419828777D0000C8A2F0 /* Info.plist */,
 				732841A8287A778D00C8A2F0 /* Triangle.swift */,
 				732841AA287A7E3B00C8A2F0 /* Square.swift */,
+				732841AC287A90B000C8A2F0 /* SolidShape.swift */,
+				732841AE287A917100C8A2F0 /* OutlineShape.swift */,
+				732841B3287BD96300C8A2F0 /* readMe.txt */,
 			);
 			path = lab3;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 			files = (
 				7328419728777D0000C8A2F0 /* LaunchScreen.storyboard in Resources */,
 				7328419428777D0000C8A2F0 /* Assets.xcassets in Resources */,
+				732841B4287BD96300C8A2F0 /* readMe.txt in Resources */,
 				7328419228777CFD00C8A2F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +171,7 @@
 			files = (
 				732841AB287A7E3B00C8A2F0 /* Square.swift in Sources */,
 				732841A52878F8CC00C8A2F0 /* Circle.swift in Sources */,
+				732841AD287A90B000C8A2F0 /* SolidShape.swift in Sources */,
 				7328418F28777CFD00C8A2F0 /* ViewController.swift in Sources */,
 				7328418B28777CFD00C8A2F0 /* AppDelegate.swift in Sources */,
 				732841A9287A778E00C8A2F0 /* Triangle.swift in Sources */,
@@ -168,6 +179,7 @@
 				7328418D28777CFD00C8A2F0 /* SceneDelegate.swift in Sources */,
 				732841A328778E0900C8A2F0 /* DrawingView.swift in Sources */,
 				732841A228778E0900C8A2F0 /* DrawingItem.swift in Sources */,
+				732841AF287A917100C8A2F0 /* OutlineShape.swift in Sources */,
 				732841A128778E0900C8A2F0 /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

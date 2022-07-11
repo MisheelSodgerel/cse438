@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import AudioToolbox
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+    shouldRecognizeSimultaneouslyWith otherGestureRecognizer:
+    UIGestureRecognizer) -> Bool {
+     true
+    } 
     
     @IBOutlet weak var drawingView: DrawingView!
     var currentShape: Shape?
@@ -37,15 +43,28 @@ class ViewController: UIViewController {
         currentColor = #colorLiteral(red: 0.9175234437, green: 0.6008765101, blue: 0.5633606911, alpha: 1)
     }
     
-    
-    enum segments: Int {
-        case sectionOne, sectionTwo, sectionThree
+    @IBAction func pinch(_ sender: UIPinchGestureRecognizer) {
     }
     
+    @IBAction func rotation(_ sender: UIRotationGestureRecognizer) {
+    }
     
-//    @objc func shapesSelection {
-//
-//    }
+    func alert() {
+        
+        let alertNotWorking:UIAlertController = UIAlertController(title: "Not Working", message: "Feature not yet available", preferredStyle: UIAlertController.Style.alert)
+        
+        let alertAction:UIAlertAction = UIAlertAction(title: "OK :(", style: UIAlertAction.Style.default, handler:nil)
+        
+        alertNotWorking.addAction(alertAction)
+            
+        present(alertNotWorking, animated: true, completion: nil)
+        
+    }
+    
+    enum segments: Int {
+        case sectionOne, sectionTwo, sectionThree, sectionFour, sectionFive, sectionSix
+    }
+    
     
     @IBAction func shapeSelection(_ sender: UISegmentedControl) {
         
@@ -57,6 +76,15 @@ class ViewController: UIViewController {
         }
         else if(sender.selectedSegmentIndex == segments.sectionThree.rawValue) {
             shapeSelected = segments.sectionThree.rawValue
+        }
+        else if (sender.selectedSegmentIndex == segments.sectionFour.rawValue) {
+            shapeSelected = segments.sectionFour.rawValue
+        }
+        else if(sender.selectedSegmentIndex == segments.sectionFive.rawValue) {
+            shapeSelected = segments.sectionFive.rawValue
+        }
+        else if(sender.selectedSegmentIndex == segments.sectionSix.rawValue) {
+            shapeSelected = segments.sectionSix.rawValue
         }
         else {
             fatalError("no selected shape")
@@ -74,11 +102,13 @@ class ViewController: UIViewController {
                     drawing = false
                     moving = true
                     erasing = false
+            alert()
         }
         else if(sender.selectedSegmentIndex == segments.sectionThree.rawValue) {
                     drawing = false
                     moving = false
                     erasing = true
+            alert()
         }
         else {
             fatalError("no selected action")
@@ -108,51 +138,68 @@ class ViewController: UIViewController {
             if (shapeSelected == segments.sectionThree.rawValue) {
                 currentShape = TriangleClick(origin: touchPoint, color: currentColor)
             }
+            if (shapeSelected == segments.sectionFour.rawValue) {
+                currentShape = SolidCircleClick(origin: touchPoint, color: currentColor)
+            }
+            if (shapeSelected == segments.sectionFive.rawValue) {
+                currentShape = SolidSquareClick(origin: touchPoint, color: currentColor)
+            }
+            if (shapeSelected == segments.sectionSix.rawValue) {
+                currentShape = SolidTriangleClick(origin: touchPoint, color: currentColor)
+            }
         }
-        else if (moving) {
-            
+        if (moving) {
+            currentShape = drawingView.itemAtLocation(touchPoint) as? Shape
         }
-        else if (erasing) {
-//            if (shapeSelected == segments.sectionOne.rawValue) {
-//                drawingView.items.firstIndex(where:  == touchPoint)
-//                currentShape = CircleClick(origin: touchPoint, color: currentColor)
-//            }
-//            if (shapeSelected == segments.sectionTwo.rawValue) {
-//                currentShape = SquareClick(origin: touchPoint, color: currentColor)
-//            }
-//            if (shapeSelected == segments.sectionThree.rawValue) {
-//                currentShape = TriangleClick(origin: touchPoint, color: currentColor)
-//            }
+        if (erasing) {
+            currentShape = drawingView.itemAtLocation(touchPoint) as? Shape
         }
     }
 
 
     @IBAction func clear(_ sender: UIButton) {
+        
+       /* shake animation help : https://medium.com/@_josetony/how-to-make-a-view-shake-in-swift-4-7d6858bf58d5*/
+    
+        AudioServicesPlayAlertSound(UInt32(kSystemSoundID_Vibrate))
+        
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 10, y: view.center.y))
+        shake.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 10, y: view.center.y))
+        view.layer.add(shake, forKey: "position")
+        
         drawingView.items.removeAll()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-//        guard touches.count == 1,
-//         let touchPoint = touches.first?.location(in: view)
-//        else { return }
-//        let touchPoint = (touches.first)!.location(in: view) as CGPoint
-//
-//        let distance = Functions.distance(a: touchPoint, b: (currentShape?.origin)!)
-//        currentShape?.radius = distance
-//        canvas.items = item
+        guard touches.count == 1,
+              let touchPoint = touches.first?.location(in: drawingView)
+        else { return }
+    
+        if (moving) {
+            currentShape?.origin = touchPoint
+            currentShape?.path.move(to: touchPoint)
+        }
 
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        if let newShape = currentShape {
-            drawingView.items.append(newShape)
+        if (drawing) {
+            if let newShape = currentShape {
+                drawingView.items.append(newShape)
+            }
         }
-
+        if (erasing) {
+            for (index, element) in zip(drawingView.items.indices, drawingView.items) {
+                if ((element as? Shape)?.origin == currentShape?.origin && (element as? Shape)?.color == currentShape?.color) {
+                    drawingView.items.remove(at: index)
+                }
+            }
+        }
     }
-    
-
-
 }
 

@@ -20,8 +20,8 @@
                                 <rect key="frame" x="0.0" y="129" width="428" height="559"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="IEs-0X-tyn" appends="YES" id="Eyt-1D-f5n"/>
-                                    <outletCollection property="gestureRecognizers" destination="fAD-9A-apV" appends="YES" id="RFM-U1-uHQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="h45-c5-RLY" appends="YES" id="JWH-ag-GXe"/>
+                                    <outletCollection property="gestureRecognizers" destination="w68-0h-yIw" appends="YES" id="Lby-9P-qDl"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59g-u9-U5b">
@@ -44,6 +44,9 @@
                                                     <segment title="" image="circle" catalog="system"/>
                                                     <segment title="" image="square" catalog="system"/>
                                                     <segment title="" image="triangle" catalog="system"/>
+                                                    <segment title="" image="circle.fill" catalog="system"/>
+                                                    <segment title="" image="square.fill" catalog="system"/>
+                                                    <segment title="" image="triangle.fill" catalog="system"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="shapeSelection:" destination="BYZ-38-t0r" eventType="valueChanged" id="6dG-Ph-0cM"/>
@@ -234,24 +237,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <rotationGestureRecognizer id="IEs-0X-tyn">
+                <pinchGestureRecognizer id="h45-c5-RLY">
                     <connections>
-                        <action selector="rotation:" destination="BYZ-38-t0r" id="Hsk-wh-EB0"/>
-                    </connections>
-                </rotationGestureRecognizer>
-                <pinchGestureRecognizer id="fAD-9A-apV">
-                    <connections>
-                        <action selector="pinch:" destination="BYZ-38-t0r" id="J4M-9u-7mb"/>
+                        <action selector="pinch:" destination="BYZ-38-t0r" id="nwu-e6-3FL"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="w68-0h-yIw">
+                    <connections>
+                        <action selector="rotation:" destination="BYZ-38-t0r" id="Xgx-aF-3eI"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.22429906542056" y="97.192224622030238"/>
         </scene>
     </scenes>
     <resources>
         <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="square.fill" catalog="system" width="128" height="114"/>
         <image name="triangle" catalog="system" width="128" height="112"/>
+        <image name="triangle.fill" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

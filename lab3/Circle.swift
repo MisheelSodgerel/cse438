@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CircleClick: Shape {
+class CircleClick: OutlineShape {
     
     public required init(origin: CGPoint, color: UIColor) {
         super.init(origin: origin, color: color)
@@ -15,6 +15,26 @@ class CircleClick: Shape {
 
     override func draw() {
         
+        super.draw()
+        path.addArc(withCenter: self.origin, radius: 20, startAngle: 0, endAngle: CGFloat(Float.pi*2), clockwise: true)
+        self.color.setStroke()
+        path.stroke()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class SolidCircleClick: SolidShape {
+    
+    public required init(origin: CGPoint, color: UIColor) {
+        super.init(origin: origin, color: color)
+    }
+
+    override func draw() {
+        
+        super.draw()
         path.addArc(withCenter: self.origin, radius: 20, startAngle: 0, endAngle: CGFloat(Float.pi*2), clockwise: true)
         self.color.setFill()
         path.fill()
@@ -23,5 +43,4 @@ class CircleClick: Shape {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
